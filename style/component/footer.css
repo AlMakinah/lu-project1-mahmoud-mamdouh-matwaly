@@ -1,0 +1,10 @@
+.footer {
+    border-top: 1px solid var(--border-color);
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+}
+.footer p {
+    font-size: 11px;
+    color: var(--title-color);
+}

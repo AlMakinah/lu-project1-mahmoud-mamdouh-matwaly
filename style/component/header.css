@@ -1,0 +1,24 @@
+.header {
+    background-color: var(--primary-color);
+    height: 40px;
+    line-height: 40px;
+}
+.header__search {
+    float: right;
+}
+.header__search input{
+    padding-left: 10px;
+	padding-right: 10px;
+	background-color: var(--secondary-color);
+    border: 0;
+    height: 20px;
+}
+.header__menu > li {
+    line-height: 28px;
+}
+.header__menu li + li {
+    margin-left: var(--breakpoint);
+}
+.header__menu > li > a {
+    color: var(--secondary-color);
+}
