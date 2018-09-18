@@ -2,3 +2,9 @@
     background-color: #ffffff;
     padding-top: 16px;
 }
+
+.dribble__button-middle {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}

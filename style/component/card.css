@@ -1,41 +1,52 @@
 .card {
     margin-bottom: 20px;
 }
-.card--item{
+.card__item{
     padding: 8px;
     border-radius: 2px;
     box-shadow: 0px 5px 12px -6px var(--secondary-color);
     background-color: #ffffff;
 }
 
-.card--image {
+.card__image {
     width: 100%;
     padding-bottom: 75%;
     height: 0;
 }
-.card--image img {
+.card__image img {
     width: 100%;
     object-fit: contain;
     height: auto;
 }
-.card--action {
+.card__action {
     margin-top: 4px;
 }
-.card--action li {
+
+.card__action-list {
+    float: right
+}
+
+.card__action-list li {
     font-size: 11px;
     line-height: 23px;
 }
-.card--action li + li {
+
+.card__action-list li + li {
     margin-left: 6px;
 }
 
-.card--action li a {
+.card__action-list li a {
     color: #777777;
 }
-.card--content {
+
+.card__action-add {
+    display: inline-block;
+}
+
+.card__owner {
     margin-top: 16px;
 }
-.card--content a {
+.card__owner a {
     color: #3E8CB9;
     font-size: 13px;
     font-weight: bold;
@@ -43,7 +54,7 @@
     display: inline-block;
     margin-left: 8px;
 }
-.card--content img{
+.card__owner img{
     border-radius: 50%;
     width: 16px;
     height: 16px;

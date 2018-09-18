@@ -1,14 +1,12 @@
-.button--section {
+.button-section {
     padding-bottom: 14px;
-    padding-top: 14px 
 }
 .button {
-    background-color: var(--third--color);
+    background-color: transparent;
     height: 40px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 13px;
-    color: #ffffff;
     display: block;
     line-height: 40px;
     border-radius: 4px;
@@ -16,13 +14,11 @@
     font-weight: bold;
 }
 
-.button--transparent {
-    background-color: transparent;
-    color: #3E8CB9;
+.button + .button {
     margin-top: 8px;
+    color: #3E8CB9;
 }
-.button-center {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+.button--backgroundcolor {
+    background-color: var(--third--color);
+    color: #ffffff;
 }

@@ -14,12 +14,12 @@
 /* object */
     @import 'object/grid.css';
     @import 'object/title.css';
-    @import 'object/card.css';
     @import 'object/button.css';
 /* component */
     @import 'component/header.css';
     @import 'component/dribble.css';
     @import 'component/footer.css';
+    @import 'component/card.css';
 /* utilities */
     @import 'utilities/screen-reader.css';
     @import 'utilities/list.css';
