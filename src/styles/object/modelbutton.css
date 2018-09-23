@@ -1,0 +1,18 @@
+.model-button{
+    border-radius: 4px;
+    height: 24px;
+    line-height: 22px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 1px solid #777777;
+    color: #777777;
+    img{
+        margin-right: 10px;
+        width: 14px;
+        height: 12px;
+        margin-bottom: -1px;
+    }
+}

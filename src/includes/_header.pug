@@ -1,0 +1,25 @@
+header.header
+  .container
+    .row.row--2
+      .col
+        .row.row--2
+          .col
+            form.header__search(action="")
+              label.visually-hidden(for="search")
+              input(type="text" id="search")
+          .col
+            ul.list.list-inline.header__menu
+              
+              - var list = ['Dribbles', 'Buckets','Users','Lists']
+              - for (var i = 0; i < list.length; i++){
+                li
+                  a(href="#")= list[i]
+              - }
+      .col
+        ul.list.list-inline.text-right.header__menu
+          -  var userAction = ["Signup","Signin"]   
+            - for (var i = 0; i < userAction.length; i++){
+                li
+                  a(href="#")= userAction[i]
+            - }
+                    

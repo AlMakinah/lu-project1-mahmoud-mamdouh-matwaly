@@ -1,0 +1,25 @@
+.header {
+    background-color: var(--primary-color);
+    height: 40px;
+    line-height: 40px;
+    &__search {
+        float: right;
+        input{
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: var(--secondary-color);
+            border: 0;
+            height: 20px;
+        }
+    }
+    &__menu li {
+        line-height: 28px;
+        & + li {
+            margin-left: var(--breakpoint);
+        }
+        a {
+            color: var(--secondary-color);
+        }
+    }
+}
+
