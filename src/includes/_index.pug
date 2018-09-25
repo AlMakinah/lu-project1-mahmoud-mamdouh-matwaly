@@ -4,18 +4,18 @@ section.dribble
             .col
              h1.title Dribbles
             ul.list.list-inline.row.row--4
-                - var users = [{name: 'view', count: '125', image: 'images/Exclude.png'}, {name: 'comment', count: '111', image: 'images/Union.png'}, {name: 'like', count: '333', image: 'images/Heart.png'}]
-                
-                - for ( var i = 0; i < 5; i++) {
+                -var cardList= [{name: 'mahmoud', image:'images/list1.png'},{name: 'mamdouh',image:'images/list2.png'},{name: 'matwaly',image:'images/list3.png'}, {name: 'mohamed',image:'images/list4.png'},{name: 'mahmoud', image:'images/list1.png'},{name: 'mamdouh',image:'images/list2.png'},{name: 'matwaly',image:'images/list3.png'}, {name: 'mohamed',image:'images/list4.png'}]
+                - var cardAction = [{name: 'view', count: '125', image: 'images/Exclude.png'}, {name: 'comment', count: '111', image: 'images/Union.png'}, {name: 'like', count: '333', image: 'images/Heart.png'}]
+                each val, index in cardList
                     li.col.card
                         .card__item
-                            a.card__image(href="#inline" data-lity)
-                                img(src="images/list1.png", alt="")
+                            a.card__image(href='#inline-'+index data-lity)
+                                img(src=val.image, alt="")
                             .card__action
                                 .card__action-add
                                     a(href="#") attach 
                                 ul.list.list-inline.card__action-list    
-                                    each val, index in users
+                                    each val, index in cardAction
                                         li
                                             a(href="#") 
                                               span.visually-hidden=  val.name
@@ -24,9 +24,8 @@ section.dribble
                         .card__owner  
                             a(href="#")
                                 img(src="images/avater.png", alt="")
-                                span somename       
-                -}
+                                span= val.name
+                        include _modalbox        
             .button-section
                 a.button.dribble__button-middle.button--backgroundcolor(href="#") Sign up to continue 
                 a.button.dribble__button-middle(href="#") or sign in
-include _modalbox

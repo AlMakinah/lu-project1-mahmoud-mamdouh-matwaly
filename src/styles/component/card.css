@@ -50,6 +50,7 @@
             line-height: 23px;
             display: inline-block;
             margin-left: 8px;
+            text-transform: capitalize;
         }
         img{
             border-radius: 50%;
