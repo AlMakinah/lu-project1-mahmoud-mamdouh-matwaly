@@ -3,8 +3,8 @@
     height: 40px;
     line-height: 40px;
     background-color: #ffffff;
-}
-.footer p {
-    font-size: 11px;
-    color: var(--title-color);
+    p {
+        font-size: 11px;
+        color: var(--title-color);
+    }
 }

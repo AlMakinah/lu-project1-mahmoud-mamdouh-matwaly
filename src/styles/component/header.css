@@ -12,14 +12,17 @@
             height: 20px;
         }
     }
-    &__menu li {
-        line-height: 28px;
-        & + li {
+    &__menu {
+        li{
+            line-height: 28px;
+            a {
+                color: var(--secondary-color);
+            }
+        }    
+        li + li {
             margin-left: var(--breakpoint);
         }
-        a {
-            color: var(--secondary-color);
-        }
+        
     }
 }
 

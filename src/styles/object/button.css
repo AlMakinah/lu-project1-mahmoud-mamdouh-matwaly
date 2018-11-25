@@ -14,9 +14,9 @@
     font-weight: bold;
 }
 
-.button + .button {
+.button-section .button + .button {
     margin-top: 8px;
-    color: #3E8CB9;
+    color: #155479;
 }
 .button--backgroundcolor {
     background-color: var(--third--color);

@@ -1,30 +1,36 @@
+include mixin-value        
 section.dribble
     .container
         .row
             .col
              h1.title Dribbles
             ul.list.list-inline.row.row--4
-                -var cardList= [{name: 'mahmoud', image:'images/list1.png'},{name: 'mamdouh',image:'images/list2.png'},{name: 'matwaly',image:'images/list3.png'}, {name: 'mohamed',image:'images/list4.png'},{name: 'mahmoud', image:'images/list1.png'},{name: 'mamdouh',image:'images/list2.png'},{name: 'matwaly',image:'images/list3.png'}, {name: 'mohamed',image:'images/list4.png'}]
-                - var cardAction = [{name: 'view', count: '125', image: 'images/Exclude.png'}, {name: 'comment', count: '111', image: 'images/Union.png'}, {name: 'like', count: '333', image: 'images/Heart.png'}]
-                each val, index in cardList
+                each valCardList, index in cardList
                     li.col.card
                         .card__item
                             a.card__image(href='#inline-'+index data-lity)
-                                img(src=val.image, alt="")
+                                span.visually-hidden=valCardList.name
+                                each imageList, index in valCardList.image
+                                    picture
+                                        source(srcset=valCardList.imagewebp, type="image/webp")
+                                        source(srcset=imageList.small , type="image/jpeg", media="(max-width: 768px)")
+                                        source(srcset=valCardList.large, type="image/jpeg")
+                                        img(src=imageList.large, alt="")
                             .card__action
                                 .card__action-add
                                     a(href="#") attach 
-                                ul.list.list-inline.card__action-list    
-                                    each val, index in cardAction
-                                        li
+                                ul.list.list-inline.card__action-list   
+                                    -var cardActionList= cardAction.slice(0,3)
+                                    each val, index in cardActionList
+                                        li.card__action-list__item
                                             a(href="#") 
-                                              span.visually-hidden=  val.name
+                                              span.visually-hidden=val.name
                                               img(src=val.image, alt="")
-                                              span.card--action-count= val.count 
+                                              span= val.count 
                         .card__owner  
-                            a(href="#")
-                                img(src="images/avater.png", alt="")
-                                span= val.name
+                            a.card__owner__link(href="#")
+                                img(src=valCardList.avater.large, alt="")
+                                span= valCardList.name
                         include _modalbox        
             .button-section
                 a.button.dribble__button-middle.button--backgroundcolor(href="#") Sign up to continue 

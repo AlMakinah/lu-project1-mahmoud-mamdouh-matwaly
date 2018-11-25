@@ -5,11 +5,10 @@ header.header
         .row.row--2
           .col
             form.header__search(action="")
-              label.visually-hidden(for="search")
+              label.visually-hidden(for="search") search
               input(type="text" id="search")
           .col
             ul.list.list-inline.header__menu
-              
               - var list = ['Dribbles', 'Buckets','Users','Lists']
               - for (var i = 0; i < list.length; i++){
                 li
